@@ -1,0 +1,11 @@
+# Archivos temporales y de compilación
+*.dsk
+*.bak
+*.tmp
+*.log
+*.sws
+*.dbg
+
+# Carpetas típicas de salida / temporales (revisa si usas AppSrc, Data, etc.)
+/temp/
+/tmp/
