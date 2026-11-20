@@ -3,7 +3,6 @@
 *.bak
 *.tmp
 *.log
-*.sws
 *.dbg
 
 # Carpetas típicas de salida / temporales (revisa si usas AppSrc, Data, etc.)
