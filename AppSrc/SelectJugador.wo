@@ -15,12 +15,13 @@ Use cequipoDataDictionary.dd
 Use cjugadorDataDictionary.dd
 
 Object oSelectJugador is a cWebView
-    Set psCaption to "SelectJugador"
+    Set psCaption to "Gestión de jugadores"
     Set peWebViewStyle to wvsDrilldown
     Set peViewType to vtSelect
     Set piColumnCount to 12
-    Set pbShowCaption to False
-    Set piMaxWidth to 1024
+    Set pbShowCaption to True
+    Set piMaxWidth to 1200
+    Set psCSSClass to "GestionJugadores"
 
     Object oliga_DD is a cligaDataDictionary
     End_Object 
@@ -42,37 +43,37 @@ Object oSelectJugador is a cWebView
         Set psCSSClass to "MobileList"
         Set pbServerOnRowClick to True
         Set pbFillHeight to True
-        Set pbShowHeader to False
+        Set pbShowHeader to True
         Set piSortColumn to 0
 
         Object ojugadorID is a cWebColumn
             Entry_Item jugador.ID
-            Set psCaption to "jugador.ID"
-            Set piWidth to 124
+            Set psCaption to "ID"
+            Set piWidth to 70
         End_Object 
 
         Object ojugadorNombre is a cWebColumn
             Entry_Item jugador.Nombre
-            Set psCaption to "jugador.Nombre"
-            Set piWidth to 745
+            Set psCaption to "Nombre"
+            Set piWidth to 200
         End_Object 
 
         Object ojugadorApellido is a cWebColumn
             Entry_Item jugador.Apellido
-            Set psCaption to "jugador.Apellido"
-            Set piWidth to 745
+            Set psCaption to "Apellidos"
+            Set piWidth to 200
         End_Object 
 
         Object ojugadorNacionalidad is a cWebColumn
             Entry_Item jugador.Nacionalidad
-            Set psCaption to "jugador.Nacionalidad"
-            Set piWidth to 621
+            Set psCaption to "Nacionalidad"
+            Set piWidth to 170
         End_Object 
 
         Object oequipoID is a cWebColumn
             Entry_Item equipo.ID
-            Set psCaption to "jugador.EquipoID"
-            Set piWidth to 124
+            Set psCaption to "Equipo"
+            Set piWidth to 100
         End_Object 
 
         Object oDetailButton is a cWebColumnButton
@@ -131,7 +132,7 @@ Object oSelectJugador is a cWebView
 
         Object oSearch is a cWebMenuItem
             Set psCSSClass to "WebPromptMenuItem"
-            Set psCaption to "Search"
+            Set psCaption to "Buscar jugadores"
 
             Procedure OnClick
                 Send Search of oList
@@ -141,7 +142,7 @@ Object oSelectJugador is a cWebView
 
         Object oNewButton is a cWebMenuItem
             Set psCSSClass to "WebClearMenuItem"
-            Set psCaption to "New"
+            Set psCaption to "Nuevo jugador"
 
             WebRegisterPath ntNavigateForward oZoomJugador
 

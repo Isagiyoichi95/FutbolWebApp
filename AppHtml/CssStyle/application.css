@@ -1,0 +1,479 @@
+/* =========================================
+   FUTBOL WEB APP - DISEÑO MODERNO
+   ========================================= */
+
+/* Colores generales */
+:root {
+    --primary: #176B45;
+    --primary-dark: #104D32;
+    --secondary: #27AE60;
+    --background: #F3F6F4;
+    --surface: #FFFFFF;
+    --text: #26352D;
+    --text-light: #718078;
+    --border: #E1E9E3;
+}
+
+/* Fondo general */
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Dashboard */
+.Dashboard {
+    background-color: var(--background);
+}
+
+/* Contenedor de las tarjetas */
+.TilesGroup {
+    padding: 20px;
+}
+
+/* Tarjetas principales */
+.Tile {
+    border-radius: 14px;
+    padding: 25px;
+    margin: 10px;
+    min-height: 180px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el ratón */
+.Tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Tarjetas claras */
+.Tile.Light {
+    background: #FFFFFF;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+/* Tarjetas claras alternativas */
+.Tile.LightAlternate {
+    background: #E5F3EA;
+    color: var(--primary-dark);
+}
+
+/* Tarjetas verdes */
+.Tile.Dark {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+/* Tarjetas verdes alternativas */
+.Tile.DarkAlternate {
+    background: var(--primary-dark);
+    color: #FFFFFF;
+}
+
+/* Títulos de tarjetas */
+.Tile_Title {
+    font-size: 30px !important;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.3;
+}
+
+/* Subtítulos */
+.Tile_Subtitle {
+    font-size: 17px !important;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* Formularios */
+input,
+select,
+textarea {
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    padding: 9px;
+}
+
+/* Botones */
+button {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+/* =========================================
+   MEJORAS DEL DASHBOARD
+   ========================================= */
+
+.TilesGroup {
+    padding: 25px;
+}
+
+/* Tarjetas */
+.Tile {
+    border-radius: 16px;
+    padding: 25px;
+    margin: 12px;
+    min-height: 135px;
+    box-shadow: 0 5px 15px rgba(20, 60, 40, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Animación */
+.Tile:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(20, 60, 40, 0.16);
+}
+
+/* Títulos */
+.Tile_Title {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* Subtítulos */
+.Tile_Subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Tarjetas verdes */
+.Tile.Dark {
+    background: linear-gradient(135deg, #176B45, #239B56);
+}
+
+/* Tarjetas verdes oscuras */
+.Tile.DarkAlternate {
+    background: linear-gradient(135deg, #104D32, #176B45);
+}
+
+/* =========================================
+   LOGIN - FUTBOLWEBAPP
+   ========================================= */
+
+/* Fondo general */
+.LoginBackground {
+    background: linear-gradient(135deg, #0b2e20, #176b45, #239b56) !important;
+    min-height: 100vh;
+}
+
+/* Panel de inicio de sesión */
+.LoginView {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.20);
+}
+
+/* Nombre de la aplicación */
+.LoginBrand {
+    color: #176b45 !important;
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+/* Subtítulo */
+.LoginSubtitle {
+    color: #718078 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Mensaje de error */
+.LoginWarning {
+    color: #c0392b !important;
+    background: #fdecea;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Campos del formulario */
+.LoginView input {
+    border: 1px solid #dce6df !important;
+    border-radius: 9px !important;
+    padding: 12px !important;
+    background-color: #f8faf9 !important;
+    font-size: 14px !important;
+    transition: all 0.2s ease;
+}
+
+/* Cuando seleccionamos un campo */
+.LoginView input:focus {
+    border-color: #239b56 !important;
+    box-shadow: 0 0 0 3px rgba(35, 155, 86, 0.12) !important;
+    outline: none;
+}
+
+/* Etiquetas */
+.LoginView label {
+    color: #344b3d;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* Botón de acceso */
+.LoginButton button,
+.LoginButton .WebButton {
+    background: linear-gradient(135deg, #176b45, #239b56) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    letter-spacing: 1px;
+    min-height: 45px;
+    transition: all 0.25s ease;
+}
+
+/* Efecto del botón */
+.LoginButton button:hover,
+.LoginButton .WebButton:hover {
+    background: linear-gradient(135deg, #104d32, #176b45) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(23, 107, 69, 0.25);
+}
+
+/* Adaptación a móviles */
+@media screen and (max-width: 480px) {
+    .LoginView {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .LoginBrand {
+        font-size: 26px !important;
+    }
+}
+
+/* =========================================
+   DASHBOARD - FUTBOLWEBAPP
+   ========================================= */
+
+/* Fondo del panel */
+.Dashboard {
+    background: #f1f5f2 !important;
+    padding: 15px;
+}
+
+/* Grupo de tarjetas */
+.Dashboard .TilesGroup {
+    padding: 25px;
+    background: transparent;
+}
+
+/* Tarjetas */
+.Dashboard .Tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    min-height: 145px;
+    padding: 25px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 0 5px 18px rgba(20, 60, 40, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Efecto al pasar el ratón */
+.Dashboard .Tile:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 28px rgba(20, 60, 40, 0.16);
+}
+
+/* Decoración de las tarjetas */
+.Dashboard .Tile::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: -25px;
+    bottom: -30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Títulos */
+.Dashboard .Tile_Title {
+     font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Descripciones */
+.Dashboard .Tile_Subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    opacity: 0.85;
+}
+
+/* Tarjetas claras */
+.Dashboard .Tile.Light {
+    background: linear-gradient(135deg, #ffffff, #eaf3ed);
+    color: #176b45;
+}
+
+/* Tarjetas verde claro */
+.Dashboard .Tile.LightAlternate {
+    background: linear-gradient(135deg, #dff3e6, #c4e8d1);
+    color: #104d32;
+}
+
+/* Tarjetas verdes */
+.Dashboard .Tile.Dark {
+    background: linear-gradient(135deg, #239b56, #176b45);
+    color: #ffffff;
+}
+
+/* Tarjetas verde oscuro */
+.Dashboard .Tile.DarkAlternate {
+    background: linear-gradient(135deg, #104d32, #0b3825);
+    color: #ffffff;
+}
+
+/* Adaptación a móviles */
+@media screen and (max-width: 600px) {
+    .Dashboard .TilesGroup {
+        padding: 10px;
+    }
+
+    .Dashboard .Tile {
+        min-height: 120px;
+        margin: 6px;
+        padding: 18px;
+    }
+
+    .Dashboard .Tile_Title {
+        font-size: 19px;
+    }
+}
+
+/* =========================================
+   ICONOS DEL DASHBOARD
+   ========================================= */
+
+.Dashboard .Tile_Icon {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   GESTIÓN DE JUGADORES
+   ========================================= */
+
+.GestionJugadores {
+    background: #f1f5f2 !important;
+}
+
+.GestionJugadores .WebList {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(20, 60, 40, 0.08);
+}
+
+.GestionJugadores .WebList_Table {
+    background: #ffffff;
+}
+
+.GestionJugadores .WebList tr:hover {
+    background-color: #eaf5ed !important;
+}
+
+/* =========================================
+   GESTIÓN DE JUGADORES
+   ========================================= */
+
+.GestionJugadores {
+    background: #f1f5f2 !important;
+}
+
+.GestionJugadores .WebList {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(20, 60, 40, 0.08);
+}
+
+.GestionJugadores .WebList_Table {
+    background: #ffffff;
+}
+
+.GestionJugadores .WebList tr:hover {
+    background-color: #eaf5ed !important;
+}
+
+/* =========================================
+   TABLA DE JUGADORES
+   ========================================= */
+
+.GestionJugadores .WebList {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.GestionJugadores .WebList tr {
+    transition: background-color 0.2s ease;
+}
+
+.GestionJugadores .WebList tr:hover {
+    background-color: #e4f3e8 !important;
+}
+
+.GestionJugadores .WebList td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* =========================================
+   ACCIONES DE GESTIÓN DE JUGADORES
+   ========================================= */
+
+.GestionJugadores .WebPromptMenuItem,
+.GestionJugadores .WebClearMenuItem {
+    border-radius: 9px !important;
+    font-weight: 700 !important;
+    transition: all 0.2s ease;
+    margin: 4px;
+}
+
+.GestionJugadores .WebPromptMenuItem:hover,
+.GestionJugadores .WebClearMenuItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(20, 60, 40, 0.15);
+}
+
+/* Color de la acción de búsqueda */
+.GestionJugadores .WebPromptMenuItem {
+    color: #176b45 !important;
+}
+
+/* Color de la acción de nuevo jugador */
+.GestionJugadores .WebClearMenuItem {
+    color: #239b56 !important;
+}
